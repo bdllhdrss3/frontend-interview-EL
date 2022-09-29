@@ -50,31 +50,3 @@
 	// qsa('.foo').forEach(function () {})
 	NodeList.prototype.forEach = Array.prototype.forEach;
 })(window);
-
-//my js
-$on(window, 'load', function(){
-  
-  categories = []
-  
-  categories = JSON.parse(localStorage.getItem('todos-vanillajs_categories'))
-   categories.forEach(function(x){
-    let option = `<option>${x}</option>`
-    document.getElementById("options").innerHTML += option
-  })
-
-})
-
-
-var categoryInput = document.getElementById("category")
-$on(categoryInput, 'change', function(){
-  categories = []
-
-  categories = JSON.parse(localStorage.getItem('todos-vanillajs_categories'))
-  if(categoryInput.value !== '' && !categories.includes(categoryInput.value)){
-      let option = `<option>${categoryInput.value}</option>`
-      document.getElementById("options").innerHTML += option
-      categories.push(categoryInput.value)
-      localStorage.setItem('todos-vanillajs_categories', JSON.stringify(categories))
-  }
-
-})

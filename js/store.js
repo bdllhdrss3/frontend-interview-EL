@@ -109,27 +109,12 @@
 	 */
 	Store.prototype.remove = function (id, callback) {
     var todos = JSON.parse(localStorage.getItem(this._dbName));
-    var category = ''
 
 		for (var i = 0; i < todos.length; i++) {
 			if (todos[i].id == id) {
-        category = todos[i].category
 				todos.splice(i, 1);
 				break;
 			}
-    }
-    
-    var count = todos.filter(x => x.id == id)
-    if(count.length == 0 ){
-      var categories = JSON.parse(localStorage.getItem('todos-vanillajs_categories'))
-      categories = categories.filter(x => x !== category)
-      localStorage.setItem('todos-vanillajs_categories', JSON.stringify(categories))
-
-      document.getElementById("options").innerHTML = ""
-      categories.forEach(function(x){
-        let option = `<option>${x}</option>`
-        document.getElementById("options").innerHTML += option
-      })
     }
 		localStorage.setItem(this._dbName, JSON.stringify(todos));
 		callback.call(this, todos);

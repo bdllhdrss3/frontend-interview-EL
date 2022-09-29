@@ -24,8 +24,8 @@
 		this.$main = qs('.main');
 		this.$footer = qs('.footer');
 		this.$toggleAll = qs('.toggle-all');
-    this.$newTodo = qs('.new-todo');
-    this.$Category = qs('#category');
+	    this.$newTodo = qs('.new-todo');
+
 	}
 
 	View.prototype._removeItem = function (id) {
@@ -175,9 +175,7 @@
 		var self = this;
 		if (event === 'newTodo') {
 			$on(self.$newTodo, 'change', function () {
-        if(self.$Category.value){
-        handler(self.$newTodo.value,self.$Category.value);
-        }
+	        	handler(self.$newTodo.value);    
 			});
 
 		} else if (event === 'removeCompleted') {

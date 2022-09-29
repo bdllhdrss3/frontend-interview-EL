@@ -37,8 +37,16 @@
     }
   },
   "eslintConfig": {
-    "env": { "jest": true, "browser": true, "node": true, "es6": true },
+    "env": {
+      "jest": true,
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
     "extends": "eslint:recommended",
-    "parserOptions": { "sourceType": "module", "ecmaVersion": "latest" }
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": "latest"
+    }
   }
 }

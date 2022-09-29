@@ -14,7 +14,7 @@
 		self.view = view;
 
 		self.view.bind('newTodo', function (title) {
-			self.addItem(title,category);
+			self.addItem(title);
 		});
 
 		self.view.bind('itemEdit', function (item) {
@@ -92,17 +92,15 @@
 	 * An event to fire whenever you want to add an item. Simply pass in the event
 	 * object and it'll handle the DOM insertion and saving of the new item.
 	 */
-	Controller.prototype.addItem = function (title,category = 'none') {
+	Controller.prototype.addItem = function (title) {
 		var self = this;
 
 		if (title.trim() === '') {
 			return;
     }
-    // if (category.trim() === '') {
-		// 	return;
-		// }
 
-		self.model.create(title,category.value, function () {
+
+		self.model.create(title, function () {
 			self.view.render('clearNewTodo');
 			self._filter(true);
 		});
@@ -114,7 +112,7 @@
 	Controller.prototype.editItem = function (id) {
 		var self = this;
 		self.model.read(id, function (data) {
-			self.view.render('editItem', {id: id, title: data[0].title,category:data[0].category});
+			self.view.render('editItem', {id: id, title: data[0].title});
 		});
 	};
 
@@ -127,7 +125,7 @@
 
 		if (title.length !== 0) {
 			self.model.update(id, {title: title}, function () {
-				self.view.render('editItemDone', {id: id, title: title, category: category});
+				self.view.render('editItemDone', {id: id, title: title});
 			});
 		} else {
 			self.removeItem(id);
@@ -140,7 +138,7 @@
 	Controller.prototype.editItemCancel = function (id) {
 		var self = this;
 		self.model.read(id, function (data) {
-			self.view.render('editItemDone', {id: id, title: data[0].title, category:data[0].category});
+			self.view.render('editItemDone', {id: id, title: data[0].title});
 		});
 	};
 

@@ -14,11 +14,7 @@
 		this.view = new app.View(this.template);
 		this.controller = new app.Controller(this.model, this.view);
 	}
-function Category(name) {
-		this.storage = new app.Store(name);
-	}
-  var todo = new Todo('todos-vanillajs');
-  var category = new Category('todos-vanillajs_categories');
+  	var todo = new Todo('todos-vanillajs');
 
 	function setView() {
     todo.controller.setView(document.location.hash);
