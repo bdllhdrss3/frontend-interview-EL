@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="13" failures="5" errors="0" time="2.492">
+  <testsuite name="ToDo List" errors="0" failures="5" skipped="0" timestamp="2022-09-29T12:35:21" time="2.025" tests="13">
+    <testcase classname="ToDo List should define &quot;todos-vanillajs_categories&quot; key in localStorage" name="ToDo List should define &quot;todos-vanillajs_categories&quot; key in localStorage" time="0.155">
+    </testcase>
+    <testcase classname="ToDo List should have Category input" name="ToDo List should have Category input" time="0.054">
+    </testcase>
+    <testcase classname="ToDo List should create a task with a category" name="ToDo List should create a task with a category" time="0.054">
+      <failure>TestingLibraryElementError: Unable to find an element with the text: /Test Task/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, &lt;script /&gt;, &lt;style /&gt;
+&lt;ul
+  class=&quot;todo-list&quot;
+/&gt;
+    at Object.getElementError (/projects/challenge/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+    at /projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+    at /projects/challenge/node_modules/@testing-library/dom/dist/query-helpers.js:111:19
+    at Object.&lt;anonymous&gt; (/projects/challenge/test/test.js:91:12)
+    at Promise.then.completed (/projects/challenge/node_modules/jest-circus/build/utils.js:390:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/projects/challenge/node_modules/jest-circus/build/utils.js:315:10)
+    at _callCircusTest (/projects/challenge/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/projects/challenge/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:60:9)
+    at run (/projects/challenge/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:166:21)
+    at jestAdapter (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/projects/challenge/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/projects/challenge/node_modules/jest-runner/build/runTest.js:481:34)
+    at TestRunner.runTests (/projects/challenge/node_modules/jest-runner/build/index.js:111:12)
+    at TestScheduler.scheduleTests (/projects/challenge/node_modules/@jest/core/build/TestScheduler.js:333:13)
+    at runJest (/projects/challenge/node_modules/@jest/core/build/runJest.js:387:19)
+    at _run10000 (/projects/challenge/node_modules/@jest/core/build/cli/index.js:408:7)
+    at runCLI (/projects/challenge/node_modules/@jest/core/build/cli/index.js:261:3)
+    at Object.run (/projects/challenge/node_modules/jest-cli/build/cli/index.js:163:37)</failure>
+    </testcase>
+    <testcase classname="ToDo List should save category to localStorage" name="ToDo List should save category to localStorage" time="0.047">
+    </testcase>
+    <testcase classname="ToDo List should not create a task if title is empty" name="ToDo List should not create a task if title is empty" time="0.041">
+    </testcase>
+    <testcase classname="ToDo List should not create a task if category is empty" name="ToDo List should not create a task if category is empty" time="0.044">
+    </testcase>
+    <testcase classname="ToDo List should delete a task" name="ToDo List should delete a task" time="0.036">
+      <failure>TypeError: Cannot read properties of null (reading &apos;closest&apos;)
+    at deleteTask (/projects/challenge/test/test.js:66:18)
+    at Object.&lt;anonymous&gt; (/projects/challenge/test/test.js:131:5)
+    at Promise.then.completed (/projects/challenge/node_modules/jest-circus/build/utils.js:390:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/projects/challenge/node_modules/jest-circus/build/utils.js:315:10)
+    at _callCircusTest (/projects/challenge/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/projects/challenge/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:60:9)
+    at run (/projects/challenge/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:166:21)
+    at jestAdapter (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/projects/challenge/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/projects/challenge/node_modules/jest-runner/build/runTest.js:481:34)
+    at TestRunner.runTests (/projects/challenge/node_modules/jest-runner/build/index.js:111:12)
+    at TestScheduler.scheduleTests (/projects/challenge/node_modules/@jest/core/build/TestScheduler.js:333:13)
+    at runJest (/projects/challenge/node_modules/@jest/core/build/runJest.js:387:19)
+    at _run10000 (/projects/challenge/node_modules/@jest/core/build/cli/index.js:408:7)
+    at runCLI (/projects/challenge/node_modules/@jest/core/build/cli/index.js:261:3)
+    at Object.run (/projects/challenge/node_modules/jest-cli/build/cli/index.js:163:37)</failure>
+    </testcase>
+    <testcase classname="ToDo List should delete a task from local storage" name="ToDo List should delete a task from local storage" time="0.038">
+      <failure>TypeError: Cannot read properties of null (reading &apos;closest&apos;)
+    at deleteTask (/projects/challenge/test/test.js:66:18)
+    at Object.&lt;anonymous&gt; (/projects/challenge/test/test.js:139:5)
+    at Promise.then.completed (/projects/challenge/node_modules/jest-circus/build/utils.js:390:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/projects/challenge/node_modules/jest-circus/build/utils.js:315:10)
+    at _callCircusTest (/projects/challenge/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/projects/challenge/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:60:9)
+    at run (/projects/challenge/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:166:21)
+    at jestAdapter (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/projects/challenge/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/projects/challenge/node_modules/jest-runner/build/runTest.js:481:34)
+    at TestRunner.runTests (/projects/challenge/node_modules/jest-runner/build/index.js:111:12)
+    at TestScheduler.scheduleTests (/projects/challenge/node_modules/@jest/core/build/TestScheduler.js:333:13)
+    at runJest (/projects/challenge/node_modules/@jest/core/build/runJest.js:387:19)
+    at _run10000 (/projects/challenge/node_modules/@jest/core/build/cli/index.js:408:7)
+    at runCLI (/projects/challenge/node_modules/@jest/core/build/cli/index.js:261:3)
+    at Object.run (/projects/challenge/node_modules/jest-cli/build/cli/index.js:163:37)</failure>
+    </testcase>
+    <testcase classname="ToDo List should delete a category without tasks from local storage" name="ToDo List should delete a category without tasks from local storage" time="0.049">
+      <failure>TypeError: Cannot read properties of null (reading &apos;closest&apos;)
+    at deleteTask (/projects/challenge/test/test.js:66:18)
+    at Object.&lt;anonymous&gt; (/projects/challenge/test/test.js:149:5)
+    at Promise.then.completed (/projects/challenge/node_modules/jest-circus/build/utils.js:390:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/projects/challenge/node_modules/jest-circus/build/utils.js:315:10)
+    at _callCircusTest (/projects/challenge/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/projects/challenge/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:60:9)
+    at run (/projects/challenge/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:166:21)
+    at jestAdapter (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/projects/challenge/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/projects/challenge/node_modules/jest-runner/build/runTest.js:481:34)
+    at TestRunner.runTests (/projects/challenge/node_modules/jest-runner/build/index.js:111:12)
+    at TestScheduler.scheduleTests (/projects/challenge/node_modules/@jest/core/build/TestScheduler.js:333:13)
+    at runJest (/projects/challenge/node_modules/@jest/core/build/runJest.js:387:19)
+    at _run10000 (/projects/challenge/node_modules/@jest/core/build/cli/index.js:408:7)
+    at runCLI (/projects/challenge/node_modules/@jest/core/build/cli/index.js:261:3)
+    at Object.run (/projects/challenge/node_modules/jest-cli/build/cli/index.js:163:37)</failure>
+    </testcase>
+    <testcase classname="ToDo List should reuse the same category" name="ToDo List should reuse the same category" time="0.04">
+      <failure>Error: expect(received).toHaveLength(expected)
+
+Expected length: 2
+Received length: 1
+Received array:  [&quot;Test Task&quot;]
+    at Object.&lt;anonymous&gt; (/projects/challenge/test/test.js:164:39)
+    at Promise.then.completed (/projects/challenge/node_modules/jest-circus/build/utils.js:390:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/projects/challenge/node_modules/jest-circus/build/utils.js:315:10)
+    at _callCircusTest (/projects/challenge/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at _runTest (/projects/challenge/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:60:9)
+    at run (/projects/challenge/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:166:21)
+    at jestAdapter (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/projects/challenge/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/projects/challenge/node_modules/jest-runner/build/runTest.js:481:34)
+    at TestRunner.runTests (/projects/challenge/node_modules/jest-runner/build/index.js:111:12)
+    at TestScheduler.scheduleTests (/projects/challenge/node_modules/@jest/core/build/TestScheduler.js:333:13)
+    at runJest (/projects/challenge/node_modules/@jest/core/build/runJest.js:387:19)
+    at _run10000 (/projects/challenge/node_modules/@jest/core/build/cli/index.js:408:7)
+    at runCLI (/projects/challenge/node_modules/@jest/core/build/cli/index.js:261:3)
+    at Object.run (/projects/challenge/node_modules/jest-cli/build/cli/index.js:163:37)</failure>
+    </testcase>
+    <testcase classname="ToDo List should not support multiple categories" name="ToDo List should not support multiple categories" time="0.03">
+    </testcase>
+    <testcase classname="ToDo List should suggest already added categories" name="ToDo List should suggest already added categories" time="0.032">
+    </testcase>
+    <testcase classname="ToDo List should suggest categories without duplicates" name="ToDo List should suggest categories without duplicates" time="0.035">
+    </testcase>
+  </testsuite>
+</testsuites>

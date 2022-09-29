@@ -1,0 +1,44 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node server.js",
+    "pretest": "npm install",
+    "test": "jest --ci --env=jsdom --testResultsProcessor=jest-junit",
+    "test:watch": "npm test -- --watch"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "todomvc-app-css": "^2.0.1",
+    "todomvc-common": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.14.5",
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^26.0.24",
+    "dom-storage": "^2.1.0",
+    "eslint": "^7.31.0",
+    "jest": "^27.0.6",
+    "jest-junit": "^12.2.0",
+    "jsdom": "^16.6.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "env": { "jest": true, "browser": true, "node": true, "es6": true },
+    "extends": "eslint:recommended",
+    "parserOptions": { "sourceType": "module", "ecmaVersion": "latest" }
+  }
+}
